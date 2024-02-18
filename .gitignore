@@ -1,1 +1,4 @@
-/target
+target/
+.idea/
+# do not add for libs
+Cargo.lock
