@@ -6,4 +6,5 @@ edition = "2021"
 [lib]
 
 [dependencies]
+tokio = { version = "1.*", features = ["sync", "time"] }
 log = "0.4"

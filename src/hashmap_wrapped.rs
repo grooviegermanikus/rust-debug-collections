@@ -25,7 +25,9 @@ impl <K,V> HashMap<K,V>
         if self.wrapped.len() > self.warn_threshold {
             log::warn!("HashMapWrapped has reached warn threshold of {}", self.warn_threshold);
         }
-        self.wrapped.insert(k,v)
+        let ret = self.wrapped.insert(k,v);
+        info!("HashMapWrapped has {} entries", self.wrapped.len());
+        ret
     }
 
 }
